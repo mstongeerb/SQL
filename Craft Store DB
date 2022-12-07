@@ -1,0 +1,31 @@
+--create a craft store database
+CREATE TABLE michellescrafts (id INTEGER PRIMARY KEY, item_name TEXT, quanity INTEGER, retail_price INTEGER, brand TEXT);
+INSERT INTO michellescrafts VALUES (1, "yarn", 2.00, 5.00, "opalfibers");
+INSERT INTO michellescrafts VALUES (2, "crochet hook", 1.00, 3.00,"opalfibers");
+INSERT INTO michellescrafts VALUES (3, "knitting needles", 1.02, 3.50,"opalfibers");
+INSERT INTO michellescrafts VALUES (4, "embroidery kits", 5.00, 10.00,"opalfibers");
+INSERT INTO michellescrafts VALUES (5, "watercolor paints",5.00, 8.00, "kellerzkolors");
+INSERT INTO michellescrafts VALUES (6, "acrylic paints",3.00, 8.00, "kellerzkolors");
+INSERT INTO michellescrafts VALUES (7, "oil paints",7.00, 12.00, "kellerzkolors");
+INSERT INTO michellescrafts VALUES (8, "small canvas",5.00, 10.00, "ThunderArt");
+INSERT INTO michellescrafts VALUES (9, "large canvas",8.00, 15.00, "ThunderArt");
+INSERT INTO michellescrafts VALUES (10, "paintbrushes",2.00, 6.00, "ThunderArt");
+INSERT INTO michellescrafts VALUES (11, "easiel",10.00, 25.00, "ThunderArt");
+INSERT INTO michellescrafts VALUES (12, "knitting accessory kit",8.00, 15.00, "opalfibers");
+INSERT INTO michellescrafts VALUES (13, "crochet accessory kit",8.00, 15.00, "opalfibers");
+INSERT INTO michellescrafts VALUES (14, "yarn winder",20.00, 50.00, "opalfibers");
+INSERT INTO michellescrafts VALUES (15, "latch hooking kits",5.00, 12.00, "opalfibers");
+
+--display all items from database
+SELECT * FROM michellescrafts;
+
+--display all OpalFiber brand
+SELECT * FROM michellescrafts
+WHERE brand="opalfibers";
+
+-display all items in store in asc order by quanity
+SELECT * FROM michellescrafts 
+ORDER BY quantity;
+
+--what are the total quanity of items in the store?
+SELECT SUM(quanity)FROM michellescrafts
